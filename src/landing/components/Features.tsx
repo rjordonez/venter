@@ -1,6 +1,15 @@
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 export default function Features() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); observer.unobserve(e.target) } }),
+      { threshold: 0.35 }
+    )
+    document.querySelectorAll('.bento-ev, .bento-alerts, .bento-port').forEach(el => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
   return (
     <section className="section" id="tools">
       <div className="section-inner">

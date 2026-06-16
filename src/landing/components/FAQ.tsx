@@ -28,9 +28,8 @@ const faqs = [
 ]
 
 const links = [
-  { icon: '💬', label: '24/7 Live Chat' },
-  { icon: '🎮', label: 'Discord Community', arrow: true },
-  { icon: '✕', label: 'X / Twitter', arrow: true },
+  { img: '/discord.png', label: 'Discord Community', arrow: true },
+  { img: '/x-logo.jpg',  label: 'X / Twitter',       arrow: true },
 ]
 
 export default function FAQ() {
@@ -53,7 +52,7 @@ export default function FAQ() {
             <div className="faq-support-links">
               {links.map(l => (
                 <a key={l.label} href="#" className="faq-support-link">
-                  <span className="faq-support-icon">{l.icon}</span>
+                  {l.img && <img src={l.img} alt={l.label} className="faq-support-logo" />}
                   {l.label}
                   {l.arrow && (
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{ marginLeft: 4 }}>
