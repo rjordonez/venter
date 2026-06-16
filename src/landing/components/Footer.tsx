@@ -66,7 +66,7 @@ export default function Footer() {
         <p className="footer-legal">
           Affiliate Disclosure: Venter may receive commissions for referrals to prediction market platforms.
           Past performance is not indicative of future results. Mathematical edges play out over large sample
-          sizes — individual outcomes vary. Please trade responsibly.
+          sizes. Individual outcomes vary. Please trade responsibly.
         </p>
       </div>
     </footer>

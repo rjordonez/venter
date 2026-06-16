@@ -24,7 +24,7 @@ const plans = [
     features: [
       'Unlimited Market Scanner',
       'Real-time Arbitrage Finder',
-      'Positive EV feed — live',
+      'Positive EV feed (live)',
       'Promo Optimizer',
       'Live push alerts',
       'Portfolio Tracker',

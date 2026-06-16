@@ -101,7 +101,7 @@ export default function ProfitModal({ onClose }: Props) {
             <div className="modal-email-icon">✉️</div>
             <h2 className="modal-q-title">One last thing</h2>
             <p className="modal-email-sub">
-              Enter your email and we'll show you exactly how much you can make — plus send your first free picks today.
+              Enter your email and we'll show you exactly how much you can make, plus send your first free picks today.
             </p>
             <form onSubmit={submitEmail} style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
               <input

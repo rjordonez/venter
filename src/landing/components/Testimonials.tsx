@@ -3,10 +3,10 @@ const reviews = [
   { init: 'SR', name: 'Sofia R.', handle: '@sofiatrades', profit: '+$870', text: "The +EV scanner is insane. I placed 40 bets last month, ended up $870 ahead. The math just works." },
   { init: 'DL', name: 'David L.', handle: '@dlcontracts', profit: '+$2,100', text: "I was skeptical but the free coaching call walked me through exactly how to size positions. Haven't had a losing week since." },
   { init: 'AL', name: 'Aisha L.', handle: '@aishaedge', profit: '+$650', text: "Perfect for someone new to prediction markets. The dashboard makes it obvious what to trade and why." },
-  { init: 'TK', name: 'Tyler K.', handle: '@tylerk_ev', profit: '+$3,500', text: "Full-time job replacement territory for me. The live alerts are the key — I never miss a mispriced market now." },
+  { init: 'TK', name: 'Tyler K.', handle: '@tylerk_ev', profit: '+$3,500', text: "Full-time job replacement territory for me. The live alerts are the key. I never miss a mispriced market now." },
   { init: 'MN', name: 'Maya N.', handle: '@mayanumbers', profit: '+$490', text: "Promo optimizer alone recouped three months of subscription. Extracted $490 in bonus value in my first two weeks." },
   { init: 'RC', name: 'Ryan C.', handle: '@ryancontracts', profit: '+$1,800', text: "The portfolio tracker finally lets me see my true ROI across platforms. Venter is the missing layer for serious traders." },
-  { init: 'EH', name: 'Elena H.', handle: '@elenabets', profit: '+$730', text: "I work full time — I spend maybe 20 mins a day on this. Alerts do the work. This month: +$730." },
+  { init: 'EH', name: 'Elena H.', handle: '@elenabets', profit: '+$730', text: "I work full time. I spend maybe 20 mins a day on this. Alerts do the work. This month: +$730." },
 ]
 
 function chunk<T>(arr: T[], size: number): T[][] {

@@ -4,8 +4,8 @@ import DashboardPreview from './DashboardPreview'
 
 const avatars = [
   'https://randomuser.me/api/portraits/men/32.jpg',
-  'https://randomuser.me/api/portraits/women/44.jpg',
-  'https://randomuser.me/api/portraits/men/15.jpg',
+  'https://randomuser.me/api/portraits/women/29.jpg',
+  'https://randomuser.me/api/portraits/men/52.jpg',
 ]
 
 export default function Hero() {
@@ -43,7 +43,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero-sub">
-            Get data-backed prediction market picks sent daily — free.
+            Get data-backed prediction market picks sent daily, free.
           </p>
 
           <form

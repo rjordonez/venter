@@ -7,7 +7,7 @@ export default function CTABanner() {
     <div style={{ padding: '0 1.5rem 5rem' }}>
       <div className="cta-banner">
         <h2>Want free, profitable<br />picks sent to your inbox?</h2>
-        <p>Join 100k+ traders getting daily +EV prediction market picks — free, forever.</p>
+        <p>Join 100k+ traders getting daily +EV prediction market picks, free forever.</p>
         <form
           className="cta-form"
           onSubmit={e => { e.preventDefault(); setEmail('') }}

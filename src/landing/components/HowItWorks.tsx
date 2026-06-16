@@ -2,7 +2,7 @@ const steps = [
   {
     n: '1',
     title: "Find Platforms' Pricing Mistakes",
-    desc: "We analyze millions of contracts to find markets where one platform's price is wildly out of step with what the data says — or with what other platforms show.",
+    desc: "We analyze millions of contracts to find markets where one platform's price is wildly out of step with what the data says, or with what other platforms show.",
   },
   {
     n: '2',
@@ -12,7 +12,7 @@ const steps = [
   {
     n: '3',
     title: 'You Take the Position',
-    desc: "Platforms reprice fast, so you need to act quickly. Over time your mathematical edge compounds — wins outpace losses and your bankroll grows.",
+    desc: "Platforms reprice fast, so you need to act quickly. Over time your mathematical edge compounds. Wins outpace losses and your bankroll grows.",
   },
 ]
 
@@ -23,7 +23,7 @@ export default function HowItWorks() {
         <span className="section-tag">The Method</span>
         <h2>How data-driven prediction<br />market trading actually works</h2>
         <p className="section-sub">
-          It's not about predicting the future — it's about finding where the market's
+          It's not about predicting the future. It's about finding where the market's
           price is wrong. Math beats intuition every time.
         </p>
 
