@@ -11,9 +11,9 @@ const platformLogos = [
 const plans = [
   {
     name: 'Free',
-    monthly: '$0',
-    yearly: '$0',
-    period: 'forever',
+    dayMonthly: null,
+    dayYearly: null,
+    fullMonthly: null,
     desc: 'Get started with daily picks and see the edge for yourself.',
     features: [
       'Daily +EV picks via email',
@@ -27,9 +27,9 @@ const plans = [
   },
   {
     name: 'Pro',
-    monthly: '$49',
-    yearly: '$39',
-    period: 'per month',
+    dayMonthly: '1.63',
+    dayYearly: '1.30',
+    fullMonthly: '1.63',
     desc: 'Everything you need to trade consistently with a real edge.',
     features: [
       'Unlimited Market Scanner',
@@ -47,9 +47,9 @@ const plans = [
   },
   {
     name: 'Elite',
-    monthly: '$149',
-    yearly: '$119',
-    period: 'per month',
+    dayMonthly: '4.97',
+    dayYearly: '3.97',
+    fullMonthly: '4.97',
     desc: 'For serious traders who want every edge on every platform.',
     features: [
       'Everything in Pro',
@@ -66,7 +66,7 @@ const plans = [
 ]
 
 export default function PricingPage() {
-  const [yearly, setYearly] = useState(false)
+  const [yearly, setYearly] = useState(true)
 
   return (
     <div className="pricing-content">
@@ -94,13 +94,28 @@ export default function PricingPage() {
           <div key={plan.name} className={`pricing-card ${plan.highlighted ? 'pricing-card-pro' : ''}`}>
             {plan.highlighted && <div className="pricing-popular">Most popular</div>}
             <div className="pricing-plan-name">{plan.name}</div>
-            <div className="pricing-price">
-              {yearly ? plan.yearly : plan.monthly}
-              <span className="pricing-period"> / {plan.period}</span>
-            </div>
-            {yearly && plan.name !== 'Free' && (
-              <div className="pricing-billed-note">billed annually</div>
+
+            {plan.dayMonthly ? (
+              <div className="pricing-price-block">
+                <div className="pricing-price-row">
+                  <span className="pricing-day-price">
+                    ${yearly ? plan.dayYearly : plan.dayMonthly}
+                  </span>
+                  {yearly && (
+                    <span className="pricing-day-original">${plan.fullMonthly}</span>
+                  )}
+                </div>
+                <div className="pricing-day-label">
+                  per day, billed {yearly ? 'yearly' : 'monthly'}
+                </div>
+              </div>
+            ) : (
+              <div className="pricing-price-block">
+                <div className="pricing-day-price">$0</div>
+                <div className="pricing-day-label">free forever</div>
+              </div>
             )}
+
             <p className="pricing-desc">{plan.desc}</p>
 
             <a href={plan.href} className={`pricing-cta ${plan.highlighted ? 'pricing-cta-pro' : ''}`}>

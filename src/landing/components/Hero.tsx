@@ -32,7 +32,7 @@ export default function Hero() {
               ))}
             </div>
             <p className="hero-trust-text">
-              Trusted by <strong>100k+</strong> traders worldwide
+              Trusted by <strong>10k+</strong> traders worldwide
             </p>
           </div>
 

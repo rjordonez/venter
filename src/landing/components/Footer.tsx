@@ -15,10 +15,12 @@ export default function Footer() {
               and let math do the work.
             </p>
             <div className="footer-socials">
-              <a href="#" className="social-btn" aria-label="Twitter">𝕏</a>
-              <a href="#" className="social-btn" aria-label="Discord">💬</a>
-              <a href="#" className="social-btn" aria-label="YouTube">▶</a>
-              <a href="#" className="social-btn" aria-label="TikTok">♪</a>
+              <a href="#" className="social-btn" aria-label="X / Twitter">
+                <img src="/x-logo.jpg" alt="X" style={{ width: 40, height: 40, borderRadius: 10, objectFit: 'cover' }} />
+              </a>
+              <a href="#" className="social-btn" aria-label="Discord">
+                <img src="/discord.png" alt="Discord" style={{ width: 40, height: 40, borderRadius: 10, objectFit: 'contain' }} />
+              </a>
             </div>
           </div>
 
@@ -37,23 +39,21 @@ export default function Footer() {
           <div className="footer-col">
             <h5>Calculators</h5>
             <ul>
-              <li><a href="#">EV Calculator</a></li>
-              <li><a href="#">Arbitrage Calculator</a></li>
-              <li><a href="#">Kelly Criterion</a></li>
-              <li><a href="#">Odds Converter</a></li>
-              <li><a href="#">Parlay Builder</a></li>
+              <li><Link to="/calculators">EV Calculator</Link></li>
+              <li><Link to="/calculators">Arbitrage Calculator</Link></li>
+              <li><Link to="/calculators">Kelly Criterion</Link></li>
+              <li><Link to="/calculators">Odds Converter</Link></li>
+              <li><Link to="/calculators">No-Vig Calculator</Link></li>
+              <li><Link to="/calculators">Promo Calculator</Link></li>
             </ul>
           </div>
 
           <div className="footer-col">
             <h5>Company</h5>
             <ul>
-              <li><a href="#">Getting Started</a></li>
-              <li><a href="#pricing">Pricing</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Affiliates</a></li>
-              <li><a href="#">Help Center</a></li>
+              <li><Link to="/pricing">Pricing</Link></li>
+              <li><a href="/#faq">FAQ</a></li>
+              <li><a href="/#tools">Features</a></li>
               <li><a href="#">Privacy</a></li>
               <li><a href="#">Terms</a></li>
             </ul>

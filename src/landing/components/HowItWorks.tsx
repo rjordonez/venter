@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 const stats = [
   { value: '+7.2%',  label: 'Average edge per trade' },
   { value: '$1,240', label: 'Avg. monthly profit' },
-  { value: '100k+',  label: 'Active traders' },
+  { value: '10k+',  label: 'Active traders' },
 ]
 
 export default function HowItWorks() {
