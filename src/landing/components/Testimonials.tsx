@@ -9,11 +9,6 @@ const reviews = [
   { init: 'EH', name: 'Elena H.', handle: '@elenabets', profit: '+$730', text: "I work full time. I spend maybe 20 mins a day on this. Alerts do the work. This month: +$730." },
 ]
 
-function chunk<T>(arr: T[], size: number): T[][] {
-  const out: T[][] = []
-  for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size))
-  return out
-}
 
 const row1 = [...reviews, ...reviews]
 const row2 = [...reviews.slice(4), ...reviews.slice(0, 4), ...reviews.slice(4), ...reviews.slice(0, 4)]
