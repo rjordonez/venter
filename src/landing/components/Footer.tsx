@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -23,12 +25,12 @@ export default function Footer() {
           <div className="footer-col">
             <h5>Tools</h5>
             <ul>
-              <li><a href="#">Market Scanner</a></li>
-              <li><a href="#">Arbitrage Finder</a></li>
-              <li><a href="#">Positive EV</a></li>
-              <li><a href="#">Promo Optimizer</a></li>
-              <li><a href="#">Live Alerts</a></li>
-              <li><a href="#">Portfolio Tracker</a></li>
+              <li><Link to="/features/market-scanner">Market Scanner</Link></li>
+              <li><Link to="/features/arbitrage">Arbitrage Finder</Link></li>
+              <li><Link to="/features/ev">Positive EV</Link></li>
+              <li><Link to="/features/promo">Promo Optimizer</Link></li>
+              <li><Link to="/features/alerts">Live Alerts</Link></li>
+              <li><Link to="/features/portfolio">Portfolio Tracker</Link></li>
             </ul>
           </div>
 

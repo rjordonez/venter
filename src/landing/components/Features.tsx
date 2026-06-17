@@ -157,13 +157,6 @@ export default function Features() {
             <span className="bento-label bento-label-gray">FREE 1:1 →</span>
             <h3 className="bento-title">No experience?<br />No problem.</h3>
             <p className="bento-sub">Our coaches walk you through your first trades live.</p>
-            <div className="bento-mock bento-mock-coach">
-              <div className="coach-avatars">
-                <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="coach" className="coach-avatar" />
-                <div className="coach-video-icon">📹</div>
-              </div>
-              <div className="coach-cta">View pricing to get started</div>
-            </div>
           </Link>
 
         </div>

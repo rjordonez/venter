@@ -1,9 +1,18 @@
 import './landing.css'
+import { useState } from 'react'
+
+const platformLogos = [
+  { name: 'Kalshi',     src: '/kalshi.png' },
+  { name: 'Polymarket', src: '/polymarket.png' },
+  { name: 'Manifold',   src: '/manifold.jpg' },
+  { name: 'Limitless',  src: '/limitless-logo.png' },
+]
 
 const plans = [
   {
     name: 'Free',
-    price: '$0',
+    monthly: '$0',
+    yearly: '$0',
     period: 'forever',
     desc: 'Get started with daily picks and see the edge for yourself.',
     features: [
@@ -18,7 +27,8 @@ const plans = [
   },
   {
     name: 'Pro',
-    price: '$49',
+    monthly: '$49',
+    yearly: '$39',
     period: 'per month',
     desc: 'Everything you need to trade consistently with a real edge.',
     features: [
@@ -37,7 +47,8 @@ const plans = [
   },
   {
     name: 'Elite',
-    price: '$149',
+    monthly: '$149',
+    yearly: '$119',
     period: 'per month',
     desc: 'For serious traders who want every edge on every platform.',
     features: [
@@ -55,41 +66,66 @@ const plans = [
 ]
 
 export default function PricingPage() {
+  const [yearly, setYearly] = useState(false)
+
   return (
     <div className="pricing-content">
-        <div className="pricing-header">
-          <h1 className="pricing-title">Simple, transparent pricing</h1>
-          <p className="pricing-sub">Start free. Upgrade when you're ready to go all in.</p>
+      <div className="pricing-header">
+        <h1 className="pricing-title">Simple, transparent pricing</h1>
+        <p className="pricing-sub">Start free. Upgrade when you're ready to go all in.</p>
+
+        <div className="pricing-toggle">
+          <button
+            className={`pricing-toggle-btn ${!yearly ? 'active' : ''}`}
+            onClick={() => setYearly(false)}
+          >Monthly</button>
+          <button
+            className={`pricing-toggle-btn ${yearly ? 'active' : ''}`}
+            onClick={() => setYearly(true)}
+          >
+            Yearly
+            <span className="pricing-toggle-badge">Save 20%</span>
+          </button>
         </div>
-
-        <div className="pricing-grid">
-          {plans.map(plan => (
-            <div key={plan.name} className={`pricing-card ${plan.highlighted ? 'pricing-card-pro' : ''}`}>
-              {plan.highlighted && <div className="pricing-popular">Most popular</div>}
-              <div className="pricing-plan-name">{plan.name}</div>
-              <div className="pricing-price">
-                {plan.price}
-                <span className="pricing-period"> / {plan.period}</span>
-              </div>
-              <p className="pricing-desc">{plan.desc}</p>
-
-              <a href={plan.href} className={`pricing-cta ${plan.highlighted ? 'pricing-cta-pro' : ''}`}>
-                {plan.cta}
-              </a>
-
-              <ul className="pricing-features">
-                {plan.features.map(f => (
-                  <li key={f} className="pricing-feature">
-                    <span className="pricing-check">✓</span>
-                    {f}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <p className="pricing-fine">No contracts. Cancel anytime. 7-day free trial on Pro.</p>
       </div>
+
+      <div className="pricing-grid">
+        {plans.map(plan => (
+          <div key={plan.name} className={`pricing-card ${plan.highlighted ? 'pricing-card-pro' : ''}`}>
+            {plan.highlighted && <div className="pricing-popular">Most popular</div>}
+            <div className="pricing-plan-name">{plan.name}</div>
+            <div className="pricing-price">
+              {yearly ? plan.yearly : plan.monthly}
+              <span className="pricing-period"> / {plan.period}</span>
+            </div>
+            {yearly && plan.name !== 'Free' && (
+              <div className="pricing-billed-note">billed annually</div>
+            )}
+            <p className="pricing-desc">{plan.desc}</p>
+
+            <a href={plan.href} className={`pricing-cta ${plan.highlighted ? 'pricing-cta-pro' : ''}`}>
+              {plan.cta}
+            </a>
+
+            <ul className="pricing-features">
+              {plan.features.map(f => (
+                <li key={f} className="pricing-feature">
+                  <span className="pricing-check">✓</span>
+                  {f}
+                </li>
+              ))}
+            </ul>
+
+            <div className="pricing-card-logos">
+              {platformLogos.map(p => (
+                <img key={p.name} src={p.src} alt={p.name} className="pricing-card-logo" />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <p className="pricing-fine">No contracts. Cancel anytime. 7-day free trial on Pro.</p>
+    </div>
   )
 }
